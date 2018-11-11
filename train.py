@@ -37,8 +37,6 @@ def dqn(n_episodes=2000, max_t=1000, eps_start=1.0, eps_end=0.01, eps_decay=0.99
     scores_window = deque(maxlen=100)  # last 100 scores
     eps = eps_start                    # initialize epsilon
     
-    # agent uses double DQN with dueling + experience replay
-    #agent = Agent(state_size=state_size, action_size=action_size, seed=0, num_layers=2, hidden_units=64)
     agent = Agent(state_size=state_size, action_size=action_size, seed=0)
     
     for i_episode in range(1, n_episodes+1):
